@@ -2,16 +2,18 @@
 
 [345, 897, 568, 234] -> 2*/
 
+Console.WriteLine("Введите длину массива ");
+int N = Convert.ToInt32(Console.ReadLine());
 
-int N = 6;
 int [] arr = new int [N];
 Random rnd = new Random();
 int count = 0;
 
 for (int i = 0; i < N; i++) {
-    arr[i] = rnd.Next(100, 1000);
+    arr[i] = rnd.Next(1, 10);
+    Console.Write(arr[i] + " ");
     if (arr[i] % 2 == 0) {
         count++;
     }
 }
-Console.WriteLine(count);
+Console.WriteLine("четных чисел " + count);
