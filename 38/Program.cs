@@ -2,21 +2,19 @@
 
 [3 7 22 2 78] -> 76*/
 
-int N = 6;
-double [] arr = new double [N];
-Random rnd = new Random();
-double diff = 0;
+double [] arr = new double [5]{3, 7, 22, 2, 78};
+int imax = 0;
+int imin = 0;
+double result = 0;
 
-double max = arr[0]; double min = arr[0];
-for (int i = 0; i < N; i++) {
-    if (arr[i] > max) {
-        max = arr[i];
+for (int i = 0; i < 5; i++) {
+    if (arr[i] > arr[imax]) {
+        imax = i;
     }
-    if (arr[i] < min) {
-        min = arr[i];
+    else if (arr[i] < arr[imin]) {
+        imin = i;
     }
 }
-diff = max - min;
+result = arr[imax] - arr[imin];
 
-Console.WriteLine(rnd);
-Console.WriteLine(diff);
+Console.WriteLine(result);

@@ -6,11 +6,12 @@
 int N = 6;
 int [] arr = new int [N];
 Random rnd = new Random();
-int sum = 0;
+int count = 0;
 
-for (int i = 0; i < N; i++); {
-    arr[i] = rnd.Next (100, 1000);
-    if (i % 2) {
-        sum += arr[i];
+for (int i = 0; i < N; i++) {
+    arr[i] = rnd.Next(100, 1000);
+    if (arr[i] % 2 == 0) {
+        count++;
     }
 }
+Console.WriteLine(count);
